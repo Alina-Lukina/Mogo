@@ -512,11 +512,14 @@ h1, h2, h3, h4, h5, h6 {
 /* Reviews
 ================== */
 
+.section-gray {
+    padding: 40px 0;
+    background-color: #f8f8f8;
+}
 .reviews {
     max-height: 290px;
 
     position: relative;
-    background-color: #f8f8f8;
 }
 .reviews__item {
     position: relative;
@@ -634,10 +637,35 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 24px;
 }
 
+.team__social {
+    padding: 5px 20px;
+    font-size: 26px;
+    color:  #f38181;
+    background-color: #fce38a;
+    border-right: 1px solid #f38181;
+    text-decoration: none;
+}
+
+.team__social:last-child {
+    border-right: 0px;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 209px;
+    left: 18%;
+    z-index: 2;
+
+    opacity: 0;
+}
+
 
 .team__item:hover .team__photo img {
     opacity: .1;
 }
+
 
 .team__photo {
     background-image: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
@@ -648,7 +676,7 @@ h1, h2, h3, h4, h5, h6 {
     transform: translate3d(-10px, -10px, 0); /*смещаем конtейнер в 3d плоскосtи на -10 по X, Y и Z */
 }
 
-.team__item:hover .team__social {
+.team__item:hover .social {
     opacity: 1;
 }
 .team__photo img {
@@ -656,18 +684,73 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
 }
 
+.team__social:hover {
+    background-color: #f38181;
+    color: #fff;
+}
 
-.team__social {
+/* Work
+===================== */
+
+.work {
+    display: flex;
+}
+
+.work__item {
+    position: relative;
+    background: linear-gradient(to bottom, #f38181, #fce38a);
+}
+
+.work__cols {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+.work__info {
     width: 100%;
+    position: absolute;
+
+    text-align: center;
+    color: #fff;
 
     opacity: 0;
-    position: absolute;
-    top: 50%;
-    z-index: 2;
-    transform: translate3d(0, -50%, 0);
-    transition: opacity .2s linear;
 
-    background-color: #fce38a;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+
+    transform: translate3d(0, -50%, 0);
 }
+
+.work__title {
+    margin-bottom: 5px;
+    font-family: "Montserrat";
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.work__text {
+    font-family: "Roboto";
+    font-style: italic;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+.work__item:hover .work__img {
+    opacity: .1;
+}
+
+.work__item:hover .work__info {
+    opacity: 1;
+}
+
+.work__img {
+    display: block;
+    transition: opacity .2s linear;
+}
+
+
+
 
 
