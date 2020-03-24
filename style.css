@@ -639,7 +639,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .team__content {
-    width: 33%;
     text-align: center;
 }
 
@@ -1244,6 +1243,18 @@ h1, h2, h3, h4, h5, h6 {
     .about__item {
         margin-bottom: 20px;
     }
+    .reviews__text {
+        font-size: 20px;
+    }
+    .team {
+        margin-bottom: 40px;
+    }
+    .team__item {
+        margin-bottom: 80px;
+    }
+    .team__item:last-child {
+        margin-bottom: 0;
+    }
 }
 
 @media (max-width: 990px) {
@@ -1265,6 +1276,16 @@ h1, h2, h3, h4, h5, h6 {
     }
     .statistic__item:last-child {
         border: none;
+    }
+    .reviews__icon {
+        width: 100px;
+        height: 100px;
+    }
+    .reviews__text {
+        padding-left: 250px;
+    }
+    .reviews__name {
+        padding-left: 250px;
     }
 
 }
@@ -1329,6 +1350,24 @@ h1, h2, h3, h4, h5, h6 {
     .wedo__photo {
       display: none;
     }
+    .reviews {
+         max-height: 490px;
+    }
+    .reviews__icon {
+        top: 0;
+        left: 45%;
+    }
+    .reviews__text {
+        padding-top: 120px;
+        padding-left: 80px;
+    }
+    .reviews__name {
+        padding-left: 0;
+        text-align: center;
+    }
+    .team__photo img {
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 575px) {
@@ -1374,10 +1413,28 @@ h1, h2, h3, h4, h5, h6 {
     .services__item:last-child {
     border-bottom: 0;
     }
+    .reviews__text {
+        padding: 115px 10px 5px 20px;
+        font-size: 14px;
+    }
+    .reviews__name {
+        font-size: 16px;
+    }
+    .reviews__icon  {
+        left: 30%;
+    }
 }
 
 
-
+@media (max-width: 440px) {
+    .team__item {
+        margin-bottom: 20px;
+        background-color: #fff;
+    }
+    .team__photo {
+        background-color: #95e1d3;
+    }
+}
 
 
 
